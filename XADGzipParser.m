@@ -221,7 +221,11 @@ name:(NSString *)name propertiesToAdd:(NSMutableDictionary *)props
 			uint8_t os=[parent readUInt8];*/
 			[parent skipBytes:6];
 
-			if(method!=8) [XADException raiseIllegalDataException];
+			if(method!=8) {
+				[currhandle release];
+				currhandle=nil;
+				[XADException raiseIllegalDataException];
+			}
 
 			if(headid!=0x1fa1)
 			{
