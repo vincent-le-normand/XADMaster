@@ -1,0 +1,1 @@
+../../libxad/objects.c

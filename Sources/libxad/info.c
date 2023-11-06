@@ -1,0 +1,1 @@
+../../libxad/info.c
